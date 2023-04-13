@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VisualStudio\\svpp\\WpfLab2Sony\\WpfLab2Sony\\WpfLab2Sony.csproj",
+      "projectUniqueName": "D:\\VisualStudio\\svpp\\gitlab2\\vodprava\\WpfLab2Sony\\WpfLab2Sony\\WpfLab2Sony.csproj",
       "projectName": "WpfLab2Sony",
-      "projectPath": "D:\\VisualStudio\\svpp\\WpfLab2Sony\\WpfLab2Sony\\WpfLab2Sony.csproj",
+      "projectPath": "D:\\VisualStudio\\svpp\\gitlab2\\vodprava\\WpfLab2Sony\\WpfLab2Sony\\WpfLab2Sony.csproj",
       "packagesPath": "C:\\Users\\krizd\\.nuget\\packages\\",
-      "outputPath": "D:\\VisualStudio\\svpp\\WpfLab2Sony\\WpfLab2Sony\\obj\\",
+      "outputPath": "D:\\VisualStudio\\svpp\\gitlab2\\vodprava\\WpfLab2Sony\\WpfLab2Sony\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

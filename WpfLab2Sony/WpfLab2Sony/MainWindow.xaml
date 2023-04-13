@@ -60,8 +60,9 @@
                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal" Margin="20 10">
             <Label Content="CLASS" VerticalAlignment="Center" Margin="5"/>
-            <TextBox x:Name="textBoxClass" Grid.Row="1" Grid.Column="2" Margin="15" ToolTip="Категория" Width="50"
-                 />
+            <TextBox x:Name="textBoxClass" Grid.Row="1" Grid.Column="2" Margin="20 5" ToolTip="Категория"
+                 Width="50"/>
+             
          </StackPanel>
     </Grid>
 </Window>
