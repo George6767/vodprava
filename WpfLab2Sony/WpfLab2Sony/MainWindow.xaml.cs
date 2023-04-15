@@ -29,6 +29,7 @@ namespace WpfLab2Sony
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
         {
             driver.Name = textBoxName.Text;
+
             MessageBox.Show(driver.ToString());
         }
 
@@ -39,7 +40,7 @@ namespace WpfLab2Sony
 
         private void ButtonClear_Click(object sender, RoutedEventArgs e)
         {
-            11111111111111111111111115788888
+            
         }
     }
 }
