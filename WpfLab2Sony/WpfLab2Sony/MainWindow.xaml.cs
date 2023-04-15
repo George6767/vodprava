@@ -39,7 +39,7 @@ namespace WpfLab2Sony
 
         private void ButtonClear_Click(object sender, RoutedEventArgs e)
         {
-            1111111111111111111111111
+            111111111111111111111111157
         }
     }
 }
