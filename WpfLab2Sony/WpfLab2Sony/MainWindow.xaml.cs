@@ -20,9 +20,26 @@ namespace WpfLab2Sony
     /// </summary>
     public partial class MainWindow : Window
     {
+        driver driver = new driver();  
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ButtonSave_Click(object sender, RoutedEventArgs e)
+        {
+            driver.Name = textBoxName.Text;
+            MessageBox.Show(driver.ToString());
+        }
+
+        private void ButtonLoad_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonClear_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

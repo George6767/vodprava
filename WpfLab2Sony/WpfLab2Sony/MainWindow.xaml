@@ -29,6 +29,9 @@
                FontFamily="Tempus sans ITC" FontWeight="Bold" Foreground="White" 
                HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Image x:Name="image" Source='images/no.png' Grid.RowSpan="6" Margin="20"/>
+        <CheckBox x:Name="checkBoxDonor" Grid.Row="6" Content="ORGAN DONOR"
+                  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
         <TextBox x:Name="textBoxName" Grid.Row="1" Grid.Column="1" Margin="15" ToolTip="Имя" Width="200"
                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <TextBox x:Name="textBoxAddress" Grid.Row="2" Grid.Column="1" Margin="15" ToolTip="Адрес" Width="200"
@@ -49,7 +52,7 @@
             <ComboBox Width="150" Margin="10"/>
         </StackPanel>
         <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal">
-            <Label Content="Eyes" Margin="0 10 20 10"/>
+            <Label Content="HGT" Margin="0 10 20 10"/>
             <Slider x:Name="sliderHGT" Minimum="144" Maximum="255" Width="185" 
                     AutoToolTipPlacement="TopLeft" Margin="0 10 20 10"
                     TickFrequency="6" TickPlacement="TopLeft" LargeChange="10" SmallChange="1"/>
@@ -62,7 +65,17 @@
             <Label Content="CLASS" VerticalAlignment="Center" Margin="5"/>
             <TextBox x:Name="textBoxClass" Grid.Row="1" Grid.Column="2" Margin="20 5" ToolTip="Категория"
                  Width="50"/>
-             
-         </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Horizontal" Margin="20 10">
+            <Label Content="ISS" VerticalAlignment="Center" Margin="5"/>
+            <DatePicker x:Name="datePickerISS" VerticalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.Column="2" Orientation="Horizontal" Margin="20 10">
+            <Label Content="EXP" VerticalAlignment="Center" Margin="5"/>
+            <DatePicker x:Name="datePickerEXP" VerticalAlignment="Center"/>
+        </StackPanel>
+        <Button Content="Save" Grid.Column="0" Grid.Row="7" Margin="10" Click="ButtonSave_Click"/>
+        <Button Content="Load" Grid.Column="1" Grid.Row="7" Margin="10" Click="ButtonLoad_Click"/>
+        <Button Content="Clear" Grid.Column="2" Grid.Row="7" Margin="10" Click="ButtonClear_Click"/>
     </Grid>
 </Window>
