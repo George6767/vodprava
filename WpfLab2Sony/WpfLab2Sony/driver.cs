@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace WpfLab2Sony
 {
     enum GENDER { male, female, variant};
-    enum COLOREYES { brovn, green, blue, gray};
+    enum COLOREYES { brovn, green, blue, gray, black};
     public class driver
     {
         string number;
@@ -42,9 +42,10 @@ namespace WpfLab2Sony
 
         public override string? ToString()
         {
-            return $"№ {Number} from to .{Name} {Address}";
+            return $"№ {Number} {Clas1} from {Iss} to {Exp}.{Name} Dob({Dob}). {Address}. Heght {Hgt}. Eyes {Eyes}. {(Donor ? "Donor" : "Not donor")}";
+
             //return $"№ {Number} {Clas1} from {Iss} to {Exp}. {Name}, {Gender} Dob({Dob}). {Address}. " +
-            //    $"Heght {Hgt}. Eyes {Eyes}. {(Donor ? "Donor" : "Not donor")}";
+            //    $"Heght {Hgt}.  {(Donor ? "Donor" : "Not donor")}";
         }
     }
 }

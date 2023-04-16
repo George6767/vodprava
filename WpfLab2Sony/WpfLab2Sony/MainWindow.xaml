@@ -49,7 +49,7 @@
         </GroupBox>
         <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
             <Label Content="Eyes" Margin="0 10 20 10"/>
-            <ComboBox Width="150" Margin="10"/>
+            <ComboBox x:Name="comboBoxEyes" Width="150" Margin="10"/>
         </StackPanel>
         <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal">
             <Label Content="HGT" Margin="0 10 20 10"/>

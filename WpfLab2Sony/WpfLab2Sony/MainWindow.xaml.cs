@@ -24,18 +24,57 @@ namespace WpfLab2Sony
         public MainWindow()
         {
             InitializeComponent();
+            foreach(COLOREYES color in Enum.GetValues(typeof(COLOREYES)))
+            {
+                comboBoxEyes.Items.Add(color);
+            }
         }
 
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
         {
             driver.Name = textBoxName.Text;
+            driver.Number = textBoxNumber.Text;
+            driver.Address = textBoxAddress.Text;
+            if(textBoxClass.Text.Length > 0 )
+            {
+                driver.Clas1 = textBoxClass.Text[0];
+            }
+            else
+            {
+                driver.Clas1 = 'A';
+            }
+            if (datePickerDOB.SelectedDate == null)
+                driver.Dob = DateTime.Now;
+            else
+                driver.Dob = (DateTime)(datePickerDOB.SelectedDate);
+            if (datePickerISS.SelectedDate == null)
+                driver.Iss = DateTime.Now;
+            else
+                driver.Iss = (DateTime)(datePickerDOB.SelectedDate);
+            if (datePickerEXP.SelectedDate == null)
+                driver.Exp = DateTime.Now;
+            else
+                driver.Exp = (DateTime)(datePickerDOB.SelectedDate);
+            driver.Hgt = sliderHGT.Value;
+            if (checkBoxDonor.IsChecked == true)
+                driver.Donor = true;
+            else
+                driver.Donor = false;
+            if (comboBoxEyes.SelectedIndex > -1)
+                driver.Eyes = (COLOREYES)comboBoxEyes.SelectedItem;
+            if (radioButtonMale.IsChecked == true)
+                driver.Gender = GENDER.male;
+            if (radioButtonFemale.IsChecked == true)
+                driver.Gender = GENDER.female;
+            if (radioButtonVariant.IsChecked == true)
+                driver.Gender = GENDER.variant;
 
             MessageBox.Show(driver.ToString());
         }
 
         private void ButtonLoad_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void ButtonClear_Click(object sender, RoutedEventArgs e)
