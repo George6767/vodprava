@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace WpfLab2Sony
 {
@@ -74,7 +76,23 @@ namespace WpfLab2Sony
 
         private void ButtonLoad_Click(object sender, RoutedEventArgs e)
         {
-            
+            driver.Name = "Severus Snape";
+            driver.Clas1 = 'A';
+            driver.Address = "Hogwarts";
+            driver.Hgt = 0123456789;
+            driver.Gender = GENDER.male;
+            driver.Eyes = COLOREYES.gray;
+            driver.Dob = new DateTime(1968, 5, 1);
+            driver.Iss = new DateTime(2008, 10, 22);
+            driver.Exp = new DateTime(2038, 10, 22);
+            driver.Donor = true;
+            driver.UriImage = "images/arny.jpg";
+            textBoxName.Text = driver.Name;
+            textBoxNumber.Text = driver.Number;
+            textBoxAddress.Text = driver.Address;
+            textBoxClass.Text = driver.Clas1.ToString();
+            sliderHGT.Value = driver.Hgt;
+
         }
 
         private void ButtonClear_Click(object sender, RoutedEventArgs e)
@@ -85,6 +103,17 @@ namespace WpfLab2Sony
         private void radioButtonFemale_Checked(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Фалы(jpg)|*.jpg|Все файлы|*.*";
+            if(dialog.ShowDialog() == true)
+            {
+                driver.UriImage = dialog.FileName;
+                image.Source = new BitmapImage(new Uri(driver.UriImage)); 
+            }
         }
     }
 }
