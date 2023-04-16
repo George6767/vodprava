@@ -62,7 +62,7 @@ namespace WpfLab2Sony
                 driver.Donor = false;
             if (comboBoxEyes.SelectedIndex > -1)
                 driver.Eyes = (COLOREYES)comboBoxEyes.SelectedItem;
-            if (radioButtonMale.IsChecked == true)
+            if (radioButtonMale.IsChecked == true)  
                 driver.Gender = GENDER.male;
             if (radioButtonFemale.IsChecked == true)
                 driver.Gender = GENDER.female;
@@ -80,6 +80,11 @@ namespace WpfLab2Sony
         private void ButtonClear_Click(object sender, RoutedEventArgs e)
         {
             
+        }
+
+        private void radioButtonFemale_Checked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

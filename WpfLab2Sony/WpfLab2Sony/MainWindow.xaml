@@ -43,8 +43,8 @@
         <GroupBox Grid.Row="4" Grid.Column="1" Header ="sex" Margin="2">
             <StackPanel Orientation="Horizontal">
                 <RadioButton x:Name="radioButtonMale" Content="male" VerticalAlignment="Center" Margin="2"/>
-                <RadioButton x:Name="radioButtonFamale" Content="male" VerticalAlignment="Center" Margin="2"/>
-                <RadioButton x:Name="radioButtonVariant" Content="male" VerticalAlignment="Center" Margin="2"/>
+                <RadioButton x:Name="radioButtonFemale" Content="female" VerticalAlignment="Center" Margin="2" Checked="radioButtonFemale_Checked"/>
+                <RadioButton x:Name="radioButtonVariant" Content="variant" VerticalAlignment="Center" Margin="2"/>
             </StackPanel>
         </GroupBox>
         <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
