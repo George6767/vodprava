@@ -92,7 +92,18 @@ namespace WpfLab2Sony
             textBoxAddress.Text = driver.Address;
             textBoxClass.Text = driver.Clas1.ToString();
             sliderHGT.Value = driver.Hgt;
-
+            datePickerDOB.SelectedDate = driver.Dob;
+            datePickerISS.SelectedDate = driver.Iss;
+            datePickerEXP.SelectedDate = driver.Exp;
+            comboBoxEyes.SelectedItem = driver.Eyes;
+            checkBoxDonor.IsChecked = driver.Donor;
+            if (driver.Gender == GENDER.male)
+                radioButtonMale.IsChecked = true;
+            if (driver.Gender == GENDER.female)
+                radioButtonFemale.IsChecked = true; 
+            if (driver.Gender == GENDER.variant)
+                radioButtonVariant.IsChecked = true;
+            image.Source = new BitmapImage(new Uri(driver.UriImage, UriKind.RelativeOrAbsolute));
         }
 
         private void ButtonClear_Click(object sender, RoutedEventArgs e)
@@ -114,6 +125,11 @@ namespace WpfLab2Sony
                 driver.UriImage = dialog.FileName;
                 image.Source = new BitmapImage(new Uri(driver.UriImage)); 
             }
+        }
+
+        private void textBoxNumber_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

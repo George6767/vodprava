@@ -60,7 +60,7 @@
         
 
         <TextBox x:Name="textBoxNumber" Grid.Row="1" Grid.Column="2" Margin="15" ToolTip="Номер" Width="200"
-                 HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                 HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextChanged="textBoxNumber_TextChanged"/>
         <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal" Margin="20 10">
             <Label Content="CLASS" VerticalAlignment="Center" Margin="5"/>
             <TextBox x:Name="textBoxClass" Grid.Row="1" Grid.Column="2" Margin="20 5" ToolTip="Категория"
