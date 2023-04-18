@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace WpfLab2Sony
 {
@@ -79,6 +80,7 @@ namespace WpfLab2Sony
             driver.Name = "Severus Snape";
             driver.Clas1 = 'A';
             driver.Address = "Hogwarts";
+            driver.Number = "123456789";
             driver.Hgt = 0123456789;
             driver.Gender = GENDER.male;
             driver.Eyes = COLOREYES.gray;
@@ -108,12 +110,27 @@ namespace WpfLab2Sony
 
         private void ButtonClear_Click(object sender, RoutedEventArgs e)
         {
-            
+            textBoxName.Text = string.Empty;
+            textBoxName.Clear();
+            textBoxName.Text = "";
+            textBoxNumber.Text = string.Empty;
+            textBoxNumber.Clear();
+            textBoxNumber.Text = "";
+            textBoxAddress.Text = string.Empty;
+            textBoxAddress.Clear();
+            textBoxAddress.Text = "";
+            textBoxClass.Text = string.Empty;
+            textBoxClass.Clear();
+            datePickerDOB.Text = "";
+            datePickerISS.Text = "";
+
+            //radioButtonMale.Content = "";
+
         }
 
         private void radioButtonFemale_Checked(object sender, RoutedEventArgs e)
         {
-
+          
         }
 
         private void image_MouseDown(object sender, MouseButtonEventArgs e)
