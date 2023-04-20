@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -123,8 +124,17 @@ namespace WpfLab2Sony
             textBoxClass.Clear();
             datePickerDOB.Text = "";
             datePickerISS.Text = "";
+            radioButtonMale.IsChecked = false;
+            radioButtonFemale.IsChecked = false;
+            radioButtonVariant.IsChecked = false;
+            datePickerEXP.SelectedDate = null;
+            comboBoxEyes.Text = "";
+            checkBoxDonor.IsChecked = false;
+            driver.Hgt = sliderHGT.Value = 0;
+            driver.UriImage = "images/no.png";
+            image.Source = new BitmapImage(new Uri(driver.UriImage, UriKind.RelativeOrAbsolute));
 
-            //radioButtonMale.Content = "";
+
 
         }
 
@@ -145,6 +155,11 @@ namespace WpfLab2Sony
         }
 
         private void textBoxNumber_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void radioButtonMale_Checked(object sender, RoutedEventArgs e)
         {
 
         }
