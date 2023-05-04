@@ -32,6 +32,8 @@ namespace WpfLab2Sony
             {
                 comboBoxEyes.Items.Add(color);
             }
+            newDriver();
+            grid.DataContext = driver;
         }
 
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
@@ -76,7 +78,7 @@ namespace WpfLab2Sony
             MessageBox.Show(driver.ToString());
         }
 
-        private void ButtonLoad_Click(object sender, RoutedEventArgs e)
+        private void newDriver()
         {
             driver.Name = "Severus Snape";
             driver.Clas1 = 'A';
@@ -90,6 +92,12 @@ namespace WpfLab2Sony
             driver.Exp = new DateTime(2038, 10, 22);
             driver.Donor = true;
             driver.UriImage = "images/arny.jpg";
+        }
+
+        private void ButtonLoad_Click(object sender, RoutedEventArgs e)
+        {
+            newDriver();
+
             textBoxName.Text = driver.Name;
             textBoxNumber.Text = driver.Number;
             textBoxAddress.Text = driver.Address;

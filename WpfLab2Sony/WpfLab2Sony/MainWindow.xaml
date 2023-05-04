@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfLab2Sony"
         mc:Ignorable="d"
         Title="Водительская лицензия" Height="550" Width="800" FontSize="20">
-    <Grid>
+    <Grid x:Name="grid">
         <Grid.Background>
             <ImageBrush ImageSource='images/fon.jpg' />
         </Grid.Background>
@@ -32,9 +32,11 @@
         <CheckBox x:Name="checkBoxDonor" Grid.Row="6" Content="ORGAN DONOR"
                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-        <TextBox x:Name="textBoxName" Grid.Row="1" Grid.Column="1" Margin="15" ToolTip="Имя" Width="200"
+        <TextBox x:Name="textBoxName" Text="{Binding Path=Name}"
+                 Grid.Row="1" Grid.Column="1" Margin="15" ToolTip="Имя" Width="200"
                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="textBoxAddress" Grid.Row="2" Grid.Column="1" Margin="15" ToolTip="Адрес" Width="200"
+        <TextBox x:Name="textBoxAddress" Text="{Binding Path=Address}"
+                 Grid.Row="2" Grid.Column="1" Margin="15" ToolTip="Адрес" Width="200"
                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" Margin="20 10">
             <Label Content="DOB" VerticalAlignment="Center" Margin="5"/>
@@ -57,13 +59,15 @@
                     AutoToolTipPlacement="TopLeft" Margin="0 10 20 10"
                     TickFrequency="6" TickPlacement="TopLeft" LargeChange="10" SmallChange="1"/>
         </StackPanel>
-        
 
-        <TextBox x:Name="textBoxNumber" Grid.Row="1" Grid.Column="2" Margin="15" ToolTip="Номер" Width="200"
+
+        <TextBox x:Name="textBoxNumber" Text="{Binding Path=Number}"
+                 Grid.Row="1" Grid.Column="2" Margin="15" ToolTip="Номер" Width="200"
                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextChanged="textBoxNumber_TextChanged"/>
         <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal" Margin="20 10">
             <Label Content="CLASS" VerticalAlignment="Center" Margin="5"/>
-            <TextBox x:Name="textBoxClass" Grid.Row="1" Grid.Column="2" Margin="20 5" ToolTip="Категория"
+            <TextBox x:Name="textBoxClass" Text="{Binding Path=Class1}"
+                     Grid.Row="1" Grid.Column="2" Margin="20 5" ToolTip="Категория"
                  Width="50"/>
         </StackPanel>
         <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Horizontal" Margin="20 10">
