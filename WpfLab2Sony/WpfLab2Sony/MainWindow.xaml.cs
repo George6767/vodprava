@@ -38,44 +38,7 @@ namespace WpfLab2Sony
 
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
         {
-            driver.Name = textBoxName.Text;
-            driver.Number = textBoxNumber.Text;
-            driver.Address = textBoxAddress.Text;
-            if(textBoxClass.Text.Length > 0 )
-            {
-                driver.Clas1 = textBoxClass.Text[0];
-            }
-            else
-            {
-                driver.Clas1 = 'A';
-            }
-            if (datePickerDOB.SelectedDate == null)
-                driver.Dob = DateTime.Now;
-            else
-                driver.Dob = (DateTime)(datePickerDOB.SelectedDate);
-            if (datePickerISS.SelectedDate == null)
-                driver.Iss = DateTime.Now;
-            else
-                driver.Iss = (DateTime)(datePickerDOB.SelectedDate);
-            if (datePickerEXP.SelectedDate == null)
-                driver.Exp = DateTime.Now;
-            else
-                driver.Exp = (DateTime)(datePickerDOB.SelectedDate);
-            driver.Hgt = sliderHGT.Value;
-            if (checkBoxDonor.IsChecked == true)
-                driver.Donor = true;
-            else
-                driver.Donor = false;
-            if (comboBoxEyes.SelectedIndex > -1)
-                driver.Eyes = (COLOREYES)comboBoxEyes.SelectedItem;
-            if (radioButtonMale.IsChecked == true)  
-                driver.Gender = GENDER.male;
-            if (radioButtonFemale.IsChecked == true)
-                driver.Gender = GENDER.female;
-            if (radioButtonVariant.IsChecked == true)
-                driver.Gender = GENDER.variant;
-
-            MessageBox.Show(driver.ToString());
+                       MessageBox.Show(driver.ToString());
         }
 
         private void newDriver()
@@ -96,25 +59,19 @@ namespace WpfLab2Sony
 
         private void ButtonLoad_Click(object sender, RoutedEventArgs e)
         {
-            newDriver();
-
-            textBoxName.Text = driver.Name;
-            textBoxNumber.Text = driver.Number;
-            textBoxAddress.Text = driver.Address;
-            textBoxClass.Text = driver.Clas1.ToString();
-            sliderHGT.Value = driver.Hgt;
-            datePickerDOB.SelectedDate = driver.Dob;
-            datePickerISS.SelectedDate = driver.Iss;
-            datePickerEXP.SelectedDate = driver.Exp;
-            comboBoxEyes.SelectedItem = driver.Eyes;
-            checkBoxDonor.IsChecked = driver.Donor;
-            if (driver.Gender == GENDER.male)
-                radioButtonMale.IsChecked = true;
-            if (driver.Gender == GENDER.female)
-                radioButtonFemale.IsChecked = true; 
-            if (driver.Gender == GENDER.variant)
-                radioButtonVariant.IsChecked = true;
-            image.Source = new BitmapImage(new Uri(driver.UriImage, UriKind.RelativeOrAbsolute));
+            driver.Name = "Pushkin";
+            driver.Clas1 = 'B';
+            driver.Address = "London";
+            driver.Number = "777777777";
+            driver.Hgt = 168;
+            driver.Gender = GENDER.variant;
+            driver.Eyes = COLOREYES.blue;
+            driver.Dob = new DateTime(1968, 5, 1);
+            driver.Dob = new DateTime(1922, 1, 1);
+            driver.Iss = new DateTime(2008, 10, 22);
+            driver.Exp = new DateTime(2020, 10, 22);
+            driver.Donor = false;
+            driver.UriImage = "images/Pushkin.jpg";
         }
 
         private void ButtonClear_Click(object sender, RoutedEventArgs e)
@@ -168,6 +125,11 @@ namespace WpfLab2Sony
         }
 
         private void radioButtonMale_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void sliderHGT_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
 
         }
