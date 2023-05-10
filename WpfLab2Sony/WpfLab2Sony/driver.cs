@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,7 +10,7 @@ namespace WpfLab2Sony
 {
     enum GENDER { male, female, variant};
     enum COLOREYES { brovn, green, blue, gray, black};
-    public class driver
+    public class driver: INotifyPropertyChanged
     {
         string number;
         char clas1;
@@ -27,18 +29,99 @@ namespace WpfLab2Sony
         {
         }
 
-        public string Number { get => number; set => number = value; }
-        public char Clas1 { get => clas1; set => clas1 = value; }
-        public string Name { get => name; set => name = value; }
-        public double Hgt { get => hgt; set => hgt = value; }
-        public string Address { get => address; set => address = value; }
-        public DateTime Dob { get => dob; set => dob = value; }
-        public DateTime Iss { get => iss; set => iss = value; }
-        public DateTime Exp { get => exp; set => exp = value; }
-        public bool Donor { get => donor; set => donor = value; }
+        public string Number
+        {
+            get => number;
+            set
+            {
+                number = value;
+                OnPropertyChanged("Number");
+            }   
+        }
+        public char Clas1
+        { 
+            get => clas1;
+            set
+            {
+                clas1 = value;
+                OnPropertyChanged("Clas1");
+            }
+        }
+        public string Name
+        {
+            get => name;
+            set
+            {
+                name = value;
+                OnPropertyChanged("Name");
+            }
+        }
+        public double Hgt 
+        {
+            get => hgt;
+            set
+            {
+                hgt = value;
+                OnPropertyChanged("Hgt");
+            }
+        }
+        public string Address 
+        { 
+            get => address;
+            set
+            {
+                address = value;
+                OnPropertyChanged("Address");
+            }
+
+
+        }
+        public DateTime Dob
+        { get => dob;
+            set
+            {
+                dob = value;
+                OnPropertyChanged("Dob");
+            } 
+        }
+        public DateTime Iss 
+        { 
+            get => iss;
+            set
+            {
+                iss = value;
+                OnPropertyChanged("Iss");
+            }
+        }
+        public DateTime Exp 
+        {
+            get => exp;
+            set
+            {
+                exp = value;
+                OnPropertyChanged("Exp");
+            }
+        }
+        public bool Donor 
+        {
+            get => donor;
+            set
+            {
+                donor = value;
+                OnPropertyChanged("Exp");
+            }
+        }
         public string UriImage { get => uriImage; set => uriImage = value; }
         internal GENDER Gender { get => gender; set => gender = value; }
         internal COLOREYES Eyes { get => eyes; set => eyes = value; }
+
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        public void OnPropertyChanged([CallerMemberName] string prop = "")
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(prop));
+        }
 
         public override string? ToString()
         {

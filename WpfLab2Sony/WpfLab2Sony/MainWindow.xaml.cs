@@ -133,5 +133,10 @@ namespace WpfLab2Sony
         {
 
         }
+
+        private void textBoxClass_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
