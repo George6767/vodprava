@@ -61,3 +61,4 @@ D:\GitHub\SVPP\lab2\vodprava\WpfLab2Sony\WpfLab2Sony\obj\Debug\net6.0-windows\re
 D:\GitHub\SVPP\lab2\vodprava\WpfLab2Sony\WpfLab2Sony\obj\Debug\net6.0-windows\WpfLab2Sony.pdb
 D:\GitHub\SVPP\lab2\vodprava\WpfLab2Sony\WpfLab2Sony\obj\Debug\net6.0-windows\WpfLab2Sony.genruntimeconfig.cache
 D:\GitHub\SVPP\lab2\vodprava\WpfLab2Sony\WpfLab2Sony\obj\Debug\net6.0-windows\ref\WpfLab2Sony.dll
+D:\GitHub\SVPP\lab2\vodprava\WpfLab2Sony\WpfLab2Sony\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs

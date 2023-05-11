@@ -112,7 +112,15 @@ namespace WpfLab2Sony
             }
         }
         public string UriImage { get => uriImage; set => uriImage = value; }
-        internal GENDER Gender { get => gender; set => gender = value; }
+        internal GENDER Gender 
+        {
+            get => gender; 
+            set
+            {
+                gender = value;
+                OnPropertyChanged("Gender");
+            } 
+        }
         internal COLOREYES Eyes { get => eyes; set => eyes = value; }
 
         public event PropertyChangedEventHandler? PropertyChanged;
