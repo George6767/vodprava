@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace WpfLab2Sony
 {
-    enum GENDER { male, female, variant};
-    enum COLOREYES { brovn, green, blue, gray, black};
+    public enum GENDER { male, female, variant};
+    public enum COLOREYES { brovn, green, blue, gray, black};
     public class driver: INotifyPropertyChanged
     {
         string number;

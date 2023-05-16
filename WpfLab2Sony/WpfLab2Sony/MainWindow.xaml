@@ -4,10 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfLab2Sony"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="Водительская лицензия" Height="550" Width="800" FontSize="20">
     <Window.Resources>
-        <local:EnumGenderConvereterx x:Key="genderConverter"/>
+        <local:EnumGenderConvereter x:Key="genderConverter"/>
+        <ObjectDataProvider x:Key="EyesFromEnum"
+                            MethodName="GetValues"
+                            ObjectType="{x:Type sys:Enum}">
+        <ObjectDataProvider.MethodParameters>
+            <x:Type TypeName="local:COLOREYES"/>
+        </ObjectDataProvider.MethodParameters>
+            </ObjectDataProvider>
     </Window.Resources>
     <Grid x:Name="grid">
         <Grid.Background>
@@ -51,18 +59,15 @@
             <StackPanel x:Name="Gender_Panel" Orientation="Horizontal">
                 <RadioButton x:Name="radioButtonMale"
                              IsChecked="{Binding Path=Gender,
-                    Converter={StaticResource genderConverter},
-                    ConverterParameter={x:Static local:GENDER.male}}"
+                    Converter={StaticResource genderConverter}, ConverterParameter={x:Static local:GENDER.male}}"
                              Content="male" VerticalAlignment="Center" Margin="2" Checked="radioButtonMale_Checked"/>
                 <RadioButton x:Name="radioButtonFemale"
                              IsChecked="{Binding Path=Gender,
-                    Converter={StaticResource genderConverter},
-                    ConverterParameter={x:Static local:GENDER.Female}}"
+                    Converter={StaticResource genderConverter}, ConverterParameter={x:Static local:GENDER.female}}"
                              Content="female" VerticalAlignment="Center" Margin="2" Checked="radioButtonFemale_Checked"/>
                 <RadioButton x:Name="radioButtonVariant" 
                              IsChecked="{Binding Path=Gender,
-                    Converter={StaticResource genderConverter},
-                    ConverterParameter={x:Static local:GENDER.variant}}"
+                    Converter={StaticResource genderConverter}, ConverterParameter={x:Static local:GENDER.variant}}"
                              Content="variant" VerticalAlignment="Center" Margin="2"/>
             </StackPanel>
         </GroupBox>

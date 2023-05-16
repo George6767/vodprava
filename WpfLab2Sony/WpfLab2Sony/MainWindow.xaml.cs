@@ -28,10 +28,10 @@ namespace WpfLab2Sony
         public MainWindow()
         {
             InitializeComponent();
-            foreach(COLOREYES color in Enum.GetValues(typeof(COLOREYES)))
-            {
-                comboBoxEyes.Items.Add(color);
-            }
+            //foreach(COLOREYES color in Enum.GetValues(typeof(COLOREYES)))
+            //{
+            //    comboBoxEyes.Items.Add(color);
+            //}
             newDriver();
             grid.DataContext = driver;
         }
