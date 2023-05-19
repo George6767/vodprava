@@ -121,7 +121,16 @@ namespace WpfLab2Sony
                 OnPropertyChanged("Gender");
             } 
         }
-        internal COLOREYES Eyes { get => eyes; set => eyes = value; }
+        internal COLOREYES Eyes 
+        { 
+            get => eyes;
+            set
+            {
+                eyes = value;
+                OnPropertyChanged("Eyes");
+            }
+        
+        }
 
         public event PropertyChangedEventHandler? PropertyChanged;
 

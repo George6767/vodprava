@@ -57,8 +57,7 @@
         </StackPanel>
         <GroupBox x:Name="groupBox1" Grid.Row="4" Grid.Column="1" Header ="sex" Margin="2">
             <StackPanel x:Name="Gender_Panel" Orientation="Horizontal">
-                <RadioButton x:Name="radioButtonMale"
-                             IsChecked="{Binding Path=Gender,
+                <RadioButton x:Name="radioButtonMale" GroupName="gender" Content="male" IsChecked="{Binding Path=Gender,
                     Converter={StaticResource genderConverter}, ConverterParameter={x:Static local:GENDER.male}}"
                              Content="male" VerticalAlignment="Center" Margin="2" Checked="radioButtonMale_Checked"/>
                 <RadioButton x:Name="radioButtonFemale"
@@ -73,7 +72,7 @@
         </GroupBox>
         <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
             <Label Content="Eyes" Margin="0 10 20 10"/>
-            <ComboBox x:Name="comboBoxEyes" SelectedItem="{Binding Eyes}"
+            <ComboBox x:Name="comboBoxEyes" SelectedValue="{Binding Eyes}" ItemsSource="{Binding Source=}" SelectedItem="{Binding Eyes}"
                       Width="150" Margin="10"/>
         </StackPanel>
         <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal">
