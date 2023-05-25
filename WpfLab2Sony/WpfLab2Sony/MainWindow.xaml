@@ -56,24 +56,19 @@
                         VerticalAlignment="Center"/>
         </StackPanel>
         <GroupBox x:Name="groupBox1" Grid.Row="4" Grid.Column="1" Header ="sex" Margin="2">
-            <StackPanel x:Name="Gender_Panel" Orientation="Horizontal">
-                <RadioButton x:Name="radioButtonMale" GroupName="gender" Content="male" IsChecked="{Binding Path=Gender,
-                    Converter={StaticResource genderConverter}, ConverterParameter={x:Static local:GENDER.male}}"
-                             Content="male" VerticalAlignment="Center" Margin="2" Checked="radioButtonMale_Checked"/>
-                <RadioButton x:Name="radioButtonFemale"
-                             IsChecked="{Binding Path=Gender,
-                    Converter={StaticResource genderConverter}, ConverterParameter={x:Static local:GENDER.female}}"
-                             Content="female" VerticalAlignment="Center" Margin="2" Checked="radioButtonFemale_Checked"/>
-                <RadioButton x:Name="radioButtonVariant" 
-                             IsChecked="{Binding Path=Gender,
-                    Converter={StaticResource genderConverter}, ConverterParameter={x:Static local:GENDER.variant}}"
-                             Content="variant" VerticalAlignment="Center" Margin="2"/>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton x:Name="radioButtonMale" GroupName="gender" Content="male" Margin="2 0"
+                    IsChecked="{Binding Path=Gender, Converter={StaticResource genderConverter}, ConverterParameter={x:Static local:GENDER.male}}"/>
+                <RadioButton x:Name="radioButtonFemale" GroupName="gender" Content="female" Margin="2 0"
+                    IsChecked="{Binding Path=Gender,Converter={StaticResource genderConverter}, ConverterParameter={x:Static local:GENDER.female}}"/>
+                <RadioButton x:Name="radioButtonVariant" GroupName="gender" Content="variant" Margin="2 0"
+                    IsChecked="{Binding Path=Gender,Converter={StaticResource genderConverter}, ConverterParameter={x:Static local:GENDER.variant}}"/>
             </StackPanel>
         </GroupBox>
         <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
             <Label Content="Eyes" Margin="0 10 20 10"/>
-            <ComboBox x:Name="comboBoxEyes" SelectedValue="{Binding Eyes}" ItemsSource="{Binding Source=}" SelectedItem="{Binding Eyes}"
-                      Width="150" Margin="10"/>
+            <ComboBox x:Name="comboBoxEyes" SelectedValue="{Binding Eyes}" ItemsSource="{Binding Source={StaticResource EyesFromEnum}}"
+            Width="150" Margin="10"/>
         </StackPanel>
         <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal">
             <Label Content="HGT" Margin="0 10 20 10"/>
