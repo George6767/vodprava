@@ -111,7 +111,15 @@ namespace WpfLab2Sony
                 OnPropertyChanged("Exp");
             }
         }
-        public string UriImage { get => uriImage; set => uriImage = value; }
+        public string UriImage 
+        {
+            get => uriImage;
+            set
+            {
+                UriImage = value;
+                OnPropertyChanged("UriImage");
+            }
+        }
         internal GENDER Gender 
         {
             get => gender; 
