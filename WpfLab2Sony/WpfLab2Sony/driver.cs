@@ -21,7 +21,7 @@ namespace WpfLab2Sony
         DateTime iss;
         DateTime exp;
         bool donor;
-        string uriImage;
+        string? uriImage;
         GENDER gender;
         COLOREYES eyes;
 
@@ -120,7 +120,7 @@ namespace WpfLab2Sony
                 OnPropertyChanged("UriImage");
             }
         }
-        internal GENDER Gender 
+        public GENDER Gender 
         {
             get => gender; 
             set
@@ -129,7 +129,7 @@ namespace WpfLab2Sony
                 OnPropertyChanged("Gender");
             } 
         }
-        internal COLOREYES Eyes 
+        public COLOREYES Eyes 
         { 
             get => eyes;
             set

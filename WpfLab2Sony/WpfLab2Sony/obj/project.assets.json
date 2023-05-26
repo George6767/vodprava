@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\SVPP\\lab2\\vodprava\\WpfLab2Sony\\WpfLab2Sony\\WpfLab2Sony.csproj",
+      "projectUniqueName": "D:\\GitHub\\SVPP\\lab3\\vodprava\\WpfLab2Sony\\WpfLab2Sony\\WpfLab2Sony.csproj",
       "projectName": "WpfLab2Sony",
-      "projectPath": "D:\\GitHub\\SVPP\\lab2\\vodprava\\WpfLab2Sony\\WpfLab2Sony\\WpfLab2Sony.csproj",
+      "projectPath": "D:\\GitHub\\SVPP\\lab3\\vodprava\\WpfLab2Sony\\WpfLab2Sony\\WpfLab2Sony.csproj",
       "packagesPath": "C:\\Users\\Ghost\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\SVPP\\lab2\\vodprava\\WpfLab2Sony\\WpfLab2Sony\\obj\\",
+      "outputPath": "D:\\GitHub\\SVPP\\lab3\\vodprava\\WpfLab2Sony\\WpfLab2Sony\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ghost\\AppData\\Roaming\\NuGet\\NuGet.Config",

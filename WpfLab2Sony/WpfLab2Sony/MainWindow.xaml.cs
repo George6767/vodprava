@@ -115,7 +115,7 @@ namespace WpfLab2Sony
             if(dialog.ShowDialog() == true)
             {
                 driver.UriImage = dialog.FileName;
-                image.Source = new BitmapImage(new Uri(driver.UriImage)); 
+                image.Source = new BitmapImage(new Uri(driver.UriImage, UriKind.RelativeOrAbsolute)); 
             }
         }
 
