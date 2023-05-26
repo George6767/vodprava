@@ -1,20 +1,20 @@
 ﻿WpfLab2Sony
-1.0.0.0
+
 
 winexe
 C#
 .cs
-D:\GitHub\SVPP\lab2\vodprava\WpfLab2Sony\WpfLab2Sony\obj\Debug\net6.0-windows\
+D:\GitHub\SVPP\lab2\vodprava\WpfLab2Sony\WpfLab2Sony\obj\Release\net6.0-windows\
 WpfLab2Sony
 none
 false
-TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+TRACE;RELEASE;NET;NET6_0;NETCOREAPP
 D:\GitHub\SVPP\lab2\vodprava\WpfLab2Sony\WpfLab2Sony\App.xaml
 11407045341
 
-8100677242
+5-2054280022
 1941709816142
 MainWindow.xaml;
 
-False
+True
 

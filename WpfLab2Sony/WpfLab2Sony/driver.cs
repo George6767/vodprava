@@ -151,7 +151,7 @@ namespace WpfLab2Sony
         public override string? ToString()
         {
             return $"№ {Number} {Clas1} from {Iss} to {Exp}.{Name}, {Gender} Dob({Dob}). Dob({Dob}). " +
-                $"{Address}. Heght {Hgt}. Eyes {Eyes}. {(Donor ? "Donor" : "Not donor")} {UriImage}";
+                $"{Address}. Heght {Hgt}. Eyes {Eyes}. {(Donor ? "Donor" : "Not donor")}\n {UriImage}";
 
             //return $"№ {Number} {Clas1} from {Iss} to {Exp}. {Name}, {Gender} Dob({Dob}). {Address}. " +
             //    $"Heght {Hgt}.  {(Donor ? "Donor" : "Not donor")}";

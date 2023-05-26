@@ -9,6 +9,7 @@
         Title="Водительская лицензия" Height="550" Width="800" FontSize="20">
     <Window.Resources>
         <local:EnumGenderConvereter x:Key="genderConverter"/>
+        <local:ImageConverter x:Key="imageConverter"/>
         <ObjectDataProvider x:Key="EyesFromEnum"
                             MethodName="GetValues"
                             ObjectType="{x:Type sys:Enum}">
@@ -39,7 +40,7 @@
         <Label Content="DRIVER'S LICENSE" Grid.Column="1" Grid.ColumnSpan="2" FontSize="36" 
                FontFamily="Tempus sans ITC" FontWeight="Bold" Foreground="White" 
                HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Image x:Name="image" Source='images/no.png' Grid.RowSpan="6" Margin="20" MouseDown="image_MouseDown"/>
+        <Image x:Name="image" Source="{Binding UriImage, Converter={StaticResource imageConverter}}" Grid.RowSpan="6" Margin="20" MouseDown="image_MouseDown"/>
         <CheckBox x:Name="checkBoxDonor" IsChecked="{Binding Donor}"
                   Grid.Row="6" Content="ORGAN DONOR"
                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
